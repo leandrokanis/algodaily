@@ -1,3 +1,3 @@
 # AlgoDaily Challenge
 
-Solving Javascript problems from https://www.algodaily.com
+Solving daily Javascript problems from https://www.algodaily.com
