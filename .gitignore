@@ -4,3 +4,4 @@ output
 e.*
 
 makefile
+!templates/makefile

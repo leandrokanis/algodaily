@@ -1,19 +1,20 @@
-f = 20190325
+# DATE = $(date +'%Y%m%d')
+DATE = 20190325-permutation
 
 all:
 	clear
-	node $(f).js < input
+	node $(DATE)/$(DATE).js < $(DATE)/input
 init:
 	clear
-	touch output ans input | clear
-	cp templates/template.js $(f).js | clear
-	ls
+	mkdir -p $(DATE) | clear
+	cp templates/template.js $(DATE)/$(DATE).js | clear
+	touch $(DATE)/output $(DATE)/ans $(DATE)/input README.md | clear
+	tree
 diff:
 	clear
-	node $(f).js < input > output
-	clear
-	colordiff output ans -s
+	node $(DATE)/$(DATE).js < $(DATE)/input > $(DATE)/output  | clear
+	colordiff $(DATE)/output $(DATE)/ans -s
 clean:
 	clear
-	rm output ans input | clear
-	ls
+	rm $(DATE)/output $(DATE)/ans $(DATE)/input | clear
+	tree
